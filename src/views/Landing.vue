@@ -392,13 +392,24 @@
         <div class="more-info">
           <span>Click here,</span> to view the complete Team
         </div>
+      </section>
+    </div>
+    <div class="parallax-container carousel-container mb-3">
+      <div class="parallax-wrap">
+        <div class="parallax-inner"></div>
+      </div>
+      <section class="speakers-section">
         <div class="heading">
           <div class="h1 display-2">Gallery</div>
           <div class="line"></div>
         </div>
-        <v-carousel>
-          <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
-        </v-carousel>
+        <div class="carousel">
+          <v-carousel continuous cycle height="auto">
+            <v-carousel-item v-for="(item,i) in items" :key="i" eager>
+              <v-img :src="item.src" eager></v-img>
+            </v-carousel-item>
+          </v-carousel>
+        </div>
       </section>
     </div>
   </div>
@@ -415,7 +426,31 @@ export default {
       items: [
         {
           src:
-            "https://github.com/Gaurav-71/TEDxMSRIT-2020/blob/master/images/carousel/1.jpg?raw=true",
+            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Carousel/1.jpg?raw=true",
+        },
+        {
+          src:
+            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Carousel/2.jpg?raw=true",
+        },
+        {
+          src:
+            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Carousel/3.jpg?raw=true",
+        },
+        {
+          src:
+            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Carousel/4.jpg?raw=true",
+        },
+        {
+          src:
+            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Carousel/5.jpg?raw=true",
+        },
+        {
+          src:
+            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Carousel/6.jpg?raw=true",
+        },
+        {
+          src:
+            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Carousel/8.jpg?raw=true",
         },
       ],
     };
@@ -445,7 +480,6 @@ export default {
     align-items: center;
     flex-direction: column;
     color: white;
-    z-index: 1 !important;
     .h1 {
       text-align: center;
       font-family: "Anton", sans-serif !important;
@@ -516,12 +550,13 @@ export default {
       left: 0;
       width: 100%;
       height: 100%;
+      z-index: -999 !important;
       .home-inner {
         position: fixed;
         display: block;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
         height: 100%;
         background-image: url("../assets/Landing Page/banner.png");
         background-size: cover;
@@ -835,10 +870,63 @@ export default {
       color: black;
       padding: 1rem;
       text-align: center;
-      margin: 1rem 0;
+      margin: 1.5rem 0 2.5rem 0;
       span {
         color: red;
         cursor: pointer;
+      }
+    }
+  }
+  .carousel-container {
+    .parallax-wrap {
+      .parallax-inner {
+        background-image: url("../assets/Landing Page/guitar.jpg");
+      }
+    }
+    .speakers-section {
+      width: 100%;
+      padding-bottom: 1rem;
+      .heading {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .h1 {
+          text-align: center;
+          font-family: "Anton", sans-serif !important;
+          width: 100%;
+          margin: 2rem 0 1rem 0;
+          text-transform: uppercase;
+          font-weight: lighter;
+        }
+        .line {
+          width: 4%;
+          height: 5px;
+          background: $theme-color;
+          text-align: center;
+          margin-bottom: 1rem;
+          @include responsive($phone) {
+            width: 15%;
+          }
+        }
+      }
+      .carousel {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 1.5rem 0 3rem 0;
+        .v-carousel {
+          width: 900px;
+          @include responsive($tablet-portrait) {
+            width: 720px;
+          }
+          @include responsive($phone) {
+            width: 350px;
+          }
+          @include responsive($small-phone) {
+            width: 300px;
+          }
+        }
       }
     }
   }

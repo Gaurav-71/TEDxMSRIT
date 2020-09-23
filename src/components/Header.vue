@@ -12,7 +12,7 @@
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items>
-      <v-btn class="hover-color" color="black">Home</v-btn>
+      <v-btn to="/" class="hover-color" color="black" dark>Home</v-btn>
 
       <v-btn class="hover-color" color="black">About</v-btn>
 
@@ -20,7 +20,7 @@
 
       <v-btn class="hover-color" color="black">Events</v-btn>
 
-      <v-btn class="hover-color" color="black">Team</v-btn>
+      <v-btn to="/team" class="hover-color" color="black">Team</v-btn>
 
       <v-btn class="hover-color" color="black">Contact Us</v-btn>
     </v-toolbar-items>
@@ -38,8 +38,5 @@
 }
 .hover-color:hover {
   color: yellow !important;
-}
-.hover-color:active {
-  color: white !important;
 }
 </style>
