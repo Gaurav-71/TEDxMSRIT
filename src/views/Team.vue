@@ -3,19 +3,25 @@
     <div class="image-header">
       <v-img
         src="../assets/Organisers/header.png"
-        width="100vw"
-        height="40vh"
-        class="black--text align-end"
+        class="black--text align-end header-length"
         eager
       ></v-img>
-      <div class="display-3 team-title white--text pl-10 pb-10">Team</div>
+      <div class="display-3 image-title white--text pl-10 pb-10">Team</div>
     </div>
     <div class="teams">
-      <v-card v-for="(organiser,i) in organisers" :key="i" width="250px" height="250px" dark>
+      <v-card
+        v-for="(organiser, i) in organisers"
+        :key="i"
+        width="250px"
+        height="250px"
+        dark
+      >
         <v-list-item>
           <v-list-item-content>
-            <v-list-item-title class="headline">{{organiser.name}}</v-list-item-title>
-            <v-list-item-subtitle>{{organiser.desc}}</v-list-item-subtitle>
+            <v-list-item-title class="headline">{{
+              organiser.name
+            }}</v-list-item-title>
+            <v-list-item-subtitle>{{ organiser.desc }}</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
         <v-img :src="organiser.src" height="250px" eager></v-img>
@@ -133,20 +139,7 @@ export default {
   align-items: center;
   min-height: 100vh;
   background-image: $black;
-  .image-header {
-    position: relative;
-    z-index: 2;
-    border-bottom: 2px solid grey;
-    .team-title {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 3;
-      font-family: "Anton", sans-serif !important;
-      text-transform: uppercase;
-      color: $theme-color !important;
-    }
-  }
+
   .teams {
     padding-bottom: 5rem;
     width: 100%;

@@ -28,18 +28,31 @@
           <div class="line"></div>
         </div>
         <div class="p px-8 py-3 display-1">
-          Countdown is a global initiative to champion and accelerate solutions to the climate crisis, turning ideas into action. The goal: To build
-          <span>a better future by cutting greenhouse gas emissions in half by 2030</span> in the race to a zero-carbon world – a world that is safer, cleaner and fairer for everyone.
+          Countdown is a global initiative to champion and accelerate solutions
+          to the climate crisis, turning ideas into action. The goal: To build
+          <span
+            >a better future by cutting greenhouse gas emissions in half by
+            2030</span
+          >
+          in the race to a zero-carbon world – a world that is safer, cleaner
+          and fairer for everyone.
         </div>
-        <div
-          class="para px-8"
-        >The ongoing health and economic crises are reminding us of an important fact: We’re all part of the same fragile system, dependent on nature and one another.</div>
-        <div
-          class="para px-8"
-        >As we look to the future, we must build forward and emerge more sustainable and resilient than before.</div>
-        <div
-          class="para px-8"
-        >We can change climate change – #JoinTheCountdown to a safer, cleaner, fairer future. Countdown invites collaboration from every organization, company, city and nation and from citizens everywhere. It is a movement open to everyone – and everyone has a vital role to play.</div>
+        <div class="para px-8">
+          The ongoing health and economic crises are reminding us of an
+          important fact: We’re all part of the same fragile system, dependent
+          on nature and one another.
+        </div>
+        <div class="para px-8">
+          As we look to the future, we must build forward and emerge more
+          sustainable and resilient than before.
+        </div>
+        <div class="para px-8">
+          We can change climate change – #JoinTheCountdown to a safer, cleaner,
+          fairer future. Countdown invites collaboration from every
+          organization, company, city and nation and from citizens everywhere.
+          It is a movement open to everyone – and everyone has a vital role to
+          play.
+        </div>
         <div class="hashtag">
           <div class="display-3 h1">We need Your Help.</div>
           <div class="display-1">#JoinTheCountdown</div>
@@ -374,17 +387,17 @@
         </div>
         <div class="organizers">
           <div class="organizer">
-            <img src="../assets/Organisers /trupthi.jpeg" alt="organizer" />
+            <img src="../assets/Organisers/trupthi.jpeg" alt="organizer" />
             <div class="name">Trupthi Joshi</div>
             <div class="job">Curator, Organiser and Licensee</div>
           </div>
           <div class="organizer">
-            <img src="../assets/Organisers /kaushik.jpeg" alt="organizer" />
+            <img src="../assets/Organisers/kaushik.jpeg" alt="organizer" />
             <div class="name">Kaushik Singh</div>
             <div class="job">Co-organiser</div>
           </div>
           <div class="organizer">
-            <img src="../assets/Organisers /dheeraj.jpeg" alt="organizer" />
+            <img src="../assets/Organisers/dheeraj.jpeg" alt="organizer" />
             <div class="name">Dheeraj Bhat</div>
             <div class="job">Coordinator</div>
           </div>
@@ -405,7 +418,7 @@
         </div>
         <div class="carousel">
           <v-carousel continuous cycle height="auto">
-            <v-carousel-item v-for="(item,i) in items" :key="i" eager>
+            <v-carousel-item v-for="(item, i) in items" :key="i" eager>
               <v-img :src="item.src" eager></v-img>
             </v-carousel-item>
           </v-carousel>
@@ -582,30 +595,6 @@ export default {
       width: 100%;
       background: rgba(black, 0.6);
       z-index: 999;
-      .heading {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .h1 {
-          text-align: center;
-          font-family: "Anton", sans-serif !important;
-          width: 100%;
-          margin: 2rem 0 1rem 0;
-          text-transform: uppercase;
-          font-weight: lighter;
-        }
-        .line {
-          width: 4%;
-          height: 5px;
-          background: $theme-color;
-          text-align: center;
-          margin-bottom: 1rem;
-          @include responsive($phone) {
-            width: 15%;
-          }
-        }
-      }
       .p {
         font-family: DMSans, system-ui, -apple-system, system-ui, "Segoe UI",
           Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
@@ -701,30 +690,7 @@ export default {
   .themes-container {
     width: 100%;
     padding-bottom: 1rem;
-    .heading {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .h1 {
-        text-align: center;
-        font-family: "Anton", sans-serif !important;
-        width: 100%;
-        margin: 2rem 0 1rem 0;
-        text-transform: uppercase;
-        font-weight: lighter;
-      }
-      .line {
-        width: 4%;
-        height: 5px;
-        background: $theme-color;
-        text-align: center;
-        margin-bottom: 1rem;
-        @include responsive($phone) {
-          width: 15%;
-        }
-      }
-    }
+
     .themes {
       display: flex;
       justify-content: space-around;
@@ -764,30 +730,7 @@ export default {
     .speakers-section {
       width: 100%;
       padding-bottom: 1rem;
-      .heading {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .h1 {
-          text-align: center;
-          font-family: "Anton", sans-serif !important;
-          width: 100%;
-          margin: 2rem 0 1rem 0;
-          text-transform: uppercase;
-          font-weight: lighter;
-        }
-        .line {
-          width: 4%;
-          height: 5px;
-          background: $theme-color;
-          text-align: center;
-          margin-bottom: 1rem;
-          @include responsive($phone) {
-            width: 15%;
-          }
-        }
-      }
+
       .speakers {
         display: flex;
         justify-content: center;
@@ -813,30 +756,7 @@ export default {
   }
   .organizers-container {
     width: 100%;
-    .heading {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .h1 {
-        text-align: center;
-        font-family: "Anton", sans-serif !important;
-        width: 100%;
-        margin: 2rem 0 1rem 0;
-        text-transform: uppercase;
-        font-weight: lighter;
-      }
-      .line {
-        width: 4%;
-        height: 5px;
-        background: $theme-color;
-        text-align: center;
-        margin-bottom: 1rem;
-        @include responsive($phone) {
-          width: 15%;
-        }
-      }
-    }
+
     .organizers {
       width: 100%;
       display: flex;
@@ -886,30 +806,7 @@ export default {
     .speakers-section {
       width: 100%;
       padding-bottom: 1rem;
-      .heading {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .h1 {
-          text-align: center;
-          font-family: "Anton", sans-serif !important;
-          width: 100%;
-          margin: 2rem 0 1rem 0;
-          text-transform: uppercase;
-          font-weight: lighter;
-        }
-        .line {
-          width: 4%;
-          height: 5px;
-          background: $theme-color;
-          text-align: center;
-          margin-bottom: 1rem;
-          @include responsive($phone) {
-            width: 15%;
-          }
-        }
-      }
+
       .carousel {
         width: 100%;
         display: flex;
