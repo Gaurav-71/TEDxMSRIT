@@ -1,5 +1,5 @@
 <template>
-  <div class="speaker-container mb-3">
+  <div class="speaker-container">
     <div class="image-header">
       <v-img
         src="../assets/Organisers/header.png"

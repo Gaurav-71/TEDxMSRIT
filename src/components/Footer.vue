@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer ma-0">
+  <footer class="footer ma-0 mt-3">
     <div class="logo">
       <img src="../assets/Header/logo.png" alt="logos" />
     </div>
@@ -30,6 +30,9 @@
           >
             <i class="fa fa-linkedin size" aria-hidden="true"></i>
           </a>
+          <a>
+            <i @click="route" class="fa fa-user size" aria-hidden="true"></i>
+          </a>
         </li>
       </ul>
     </div>
@@ -50,6 +53,19 @@
     </div>
   </footer>
 </template>
+
+
+<script>
+export default {
+  methods: {
+    route() {
+      this.$router.push("/login");
+    },
+  },
+};
+</script>
+
+
 
 
 <style lang="scss" scoped>

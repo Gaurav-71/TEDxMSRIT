@@ -324,15 +324,15 @@
           <div class="line"></div>
         </div>
         <div class="speakers">
-          <v-card class="v-card" max-width="250">
+          <!---  <v-card class="v-card" max-width="250">
             <v-img
               height="350"
-              class="black--text align-end mx-4"
+              class="black--text align-center mx-4"
               src="../assets/Landing Page/dheeraj.jpeg"
             >
-              <v-card-title>Speaker 1</v-card-title>
+              <v-card-title style="background: red">Speaker 1</v-card-title>
             </v-img>
-          </v-card>
+          </v-card> 
           <v-card class="v-card" max-width="250">
             <v-img
               height="350"
@@ -368,11 +368,71 @@
             >
               <v-card-title>Speaker 5</v-card-title>
             </v-img>
+          </v-card> --->
+          <v-card class="v-card" width="250">
+            <v-img height="350" class="black--text align-center">
+              <v-card-title class="yellow--text black-gradient"
+                >Speaker 1
+              </v-card-title>
+              <v-card-subtitle
+                class="white--text black-gradient"
+                style="font-weight: lighter !important"
+                >To be revealed soon</v-card-subtitle
+              >
+            </v-img>
+          </v-card>
+          <v-card class="v-card" width="250">
+            <v-img height="350" class="black--text align-center">
+              <v-card-title class="yellow--text black-gradient"
+                >Speaker 2
+              </v-card-title>
+              <v-card-subtitle
+                class="white--text black-gradient"
+                style="font-weight: lighter !important"
+                >To be revealed soon</v-card-subtitle
+              >
+            </v-img>
+          </v-card>
+          <v-card class="v-card" width="250">
+            <v-img height="350" class="black--text align-center">
+              <v-card-title class="yellow--text black-gradient"
+                >Speaker 3
+              </v-card-title>
+              <v-card-subtitle
+                class="white--text black-gradient"
+                style="font-weight: lighter !important"
+                >To be revealed soon</v-card-subtitle
+              >
+            </v-img>
+          </v-card>
+          <v-card class="v-card" width="250">
+            <v-img height="350" class="black--text align-center">
+              <v-card-title class="yellow--text black-gradient"
+                >Speaker 4
+              </v-card-title>
+              <v-card-subtitle
+                class="white--text black-gradient"
+                style="font-weight: lighter !important"
+                >To be revealed soon</v-card-subtitle
+              >
+            </v-img>
+          </v-card>
+          <v-card class="v-card" width="250">
+            <v-img height="350" class="black--text align-center">
+              <v-card-title class="yellow--text black-gradient"
+                >Speaker 5
+              </v-card-title>
+              <v-card-subtitle
+                class="white--text black-gradient"
+                style="font-weight: lighter !important"
+                >To be revealed soon</v-card-subtitle
+              >
+            </v-img>
           </v-card>
         </div>
         <div class="more-info">
           For more information about speakers,
-          <span>Click Here</span>
+          <span @click="route(1)">Click Here</span>
         </div>
       </section>
     </div>
@@ -403,11 +463,11 @@
           </div>
         </div>
         <div class="more-info">
-          <span>Click here,</span> to view the complete Team
+          <span @click="route(2)">Click here,</span> to view the complete Team
         </div>
       </section>
     </div>
-    <div class="parallax-container carousel-container mb-3">
+    <div class="parallax-container carousel-container">
       <div class="parallax-wrap">
         <div class="parallax-inner"></div>
       </div>
@@ -436,6 +496,7 @@ export default {
   },
   data() {
     return {
+      unsubscribe: null,
       items: [
         {
           src:
@@ -467,6 +528,18 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    route(page) {
+      switch (page) {
+        case 1:
+          this.$router.push("/speakers");
+          break;
+        case 2:
+          this.$router.push("/team");
+          break;
+      }
+    },
   },
 };
 </script>
@@ -738,6 +811,9 @@ export default {
         .v-card {
           margin: 1rem;
           background-image: $yellow-gradient;
+          .black-gradient {
+            background-image: $black;
+          }
         }
       }
       .more-info {

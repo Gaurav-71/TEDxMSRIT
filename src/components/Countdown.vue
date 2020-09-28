@@ -12,26 +12,26 @@
           </div>
         </div>
         <div class="date">
-          <div class="data data-2">
+          <div @click="route()" class="data data-2">
             <div class="btn flashy">Register Now</div>
           </div>
         </div>
       </div>
       <div class="circle-container">
         <div class="circle days">
-          <h1>{{days}}</h1>
+          <h1>{{ days }}</h1>
           <h1>Days</h1>
         </div>
         <div class="circle hours">
-          <h1>{{hours}}</h1>
+          <h1>{{ hours }}</h1>
           <h1>Hours</h1>
         </div>
         <div class="circle mins">
-          <h1>{{minutes}}</h1>
+          <h1>{{ minutes }}</h1>
           <h1>Mins</h1>
         </div>
         <div class="circle secs">
-          <h1>{{seconds}}</h1>
+          <h1>{{ seconds }}</h1>
           <h1>Secs</h1>
         </div>
       </div>
@@ -50,6 +50,9 @@ export default {
     };
   },
   methods: {
+    route() {
+      this.$router.push("/register");
+    },
     countdown() {
       let end = new Date("2020-10-17");
       let start = new Date();

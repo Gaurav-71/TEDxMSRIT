@@ -1,5 +1,5 @@
 <template>
-  <div class="team-container mb-3">
+  <div class="team-container">
     <div class="image-header">
       <v-img
         src="../assets/Organisers/header.png"
@@ -8,25 +8,43 @@
       ></v-img>
       <div class="display-3 image-title white--text pl-10 pb-10">Team</div>
     </div>
-    <div class="teams">
-      <v-card
-        v-for="(organiser, i) in organisers"
-        :key="i"
-        width="250px"
-        height="250px"
-        dark
-      >
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title class="headline">{{
-              organiser.name
-            }}</v-list-item-title>
-            <v-list-item-subtitle>{{ organiser.desc }}</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-        <v-img :src="organiser.src" height="250px" eager></v-img>
-      </v-card>
-    </div>
+    <transition
+      name="custom-classes-transition"
+      enter-active-class="animated bounceInUp"
+      appear
+    >
+      <div class="teams mt-5">
+        <v-card
+          v-for="(organiser, i) in organisers"
+          :key="i"
+          width="250px"
+          height="320px"
+          dark
+        >
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title class="headline">{{
+                organiser.name
+              }}</v-list-item-title>
+              <v-list-item-subtitle>{{ organiser.desc }}</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+          <v-img
+            v-show="organiser.loaded"
+            :src="organiser.src"
+            height="250px"
+            :key="i"
+            eager
+            @load="onImageLoad(i)"
+          ></v-img>
+          <v-skeleton-loader
+            v-show="!organiser.loaded"
+            height="250"
+            width="250"
+            type="card"
+          ></v-skeleton-loader>
+        </v-card></div
+    ></transition>
   </div>
 </template>
 
@@ -34,99 +52,120 @@
 export default {
   data() {
     return {
+      loaded: false,
       organisers: [
         {
           name: "Trupthi Joshi",
           desc: "Curator, Organiser and Licensee",
           src:
             "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/trupthi.jpeg?raw=true",
+          loaded: false,
         },
         {
           name: "Kaushik Singh",
           desc: "Co-organiser",
           src:
             "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/kaushik.jpeg?raw=true",
+          loaded: false,
         },
         {
           name: "Dheeraj Bhat",
           desc: "Coordinator",
           src:
             "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/dheeraj.jpeg?raw=true",
+          loaded: false,
         },
         {
           name: "Gaurav V",
           desc: "Head,  Graphic Design & Website",
           src:
             "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/gaurav.jpg?raw=true",
+          loaded: false,
         },
         {
           name: "Divya",
           desc: "Co-Head,  Content Writing ",
           src:
             "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/divya.jpeg?raw=true",
+          loaded: false,
         },
         {
           name: "Tia",
           desc: "Co-Head,  Content Writing",
           src:
             "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/tia.jpeg?raw=true",
+          loaded: false,
         },
         {
           name: "Aishwarya G",
           desc: "Co-Head,  Stage Design",
           src:
             "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/aishwarya.jpeg?raw=true",
+          loaded: false,
         },
         {
           name: "Yasa Usman",
           desc: "Co-Head,  Stage Design",
           src:
             "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/yasa.jpeg?raw=true",
+          loaded: false,
         },
         {
           name: "Nidhi Kulkarni",
           desc: "Co-Head,  Publicity",
           src:
             "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/nidhi.jpeg?raw=true",
+          loaded: false,
         },
         {
           name: "Diya Wadhwani",
           desc: "Co-Head,  Publicity",
           src:
             "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/diya.jpeg?raw=true",
+          loaded: false,
         },
         {
           name: "Shriya Mahan",
           desc: "Co-Head,  Sponsorship",
           src:
             "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/shriya.jpeg?raw=true",
+          loaded: false,
         },
         {
           name: "Chandini Deb",
           desc: "Co-Head,  Sponsorship",
           src:
             "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/chandini.jpeg?raw=true",
+          loaded: false,
         },
         {
           name: "Aravind Shreyas",
-          desc: "Head in Training, Sponsorship",
+          desc: "Co-Head, Sponsorship",
           src:
             "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/shreyas.jpeg?raw=true",
+          loaded: false,
         },
         {
           name: "Aditya KK",
           desc: "Co-Head,  Logistics",
           src:
             "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/aditya.jpeg?raw=true",
+          loaded: false,
         },
         {
           name: "Aniruddh Herle",
           desc: "Co-Head,  Logistics",
           src:
             "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/anirudh.jpeg?raw=true",
+          loaded: false,
         },
       ],
     };
+  },
+  methods: {
+    onImageLoad(index) {
+      this.organisers[index].loaded = true;
+    },
   },
 };
 </script>
@@ -148,7 +187,7 @@ export default {
     justify-content: space-around;
     flex-wrap: wrap;
     .v-card {
-      margin: 3rem 0;
+      margin: 1rem 0;
       .headline {
         color: $theme-color !important;
       }
