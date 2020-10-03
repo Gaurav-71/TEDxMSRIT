@@ -8,7 +8,7 @@
         <div class="date">
           <img src="../assets/Landing Page/calendar.svg" alt />
           <div class="data">
-            <h3>OCT 17th 2020</h3>
+            <h3>OCT 24th 2020</h3>
           </div>
         </div>
         <div class="date">
@@ -54,7 +54,7 @@ export default {
       this.$router.push("/register");
     },
     countdown() {
-      let end = new Date("2020-10-17");
+      let end = new Date("2020-10-24");
       let start = new Date();
       let remTime = end.getTime() - start.getTime();
       let mm = Math.floor(remTime / (1000 * 60));

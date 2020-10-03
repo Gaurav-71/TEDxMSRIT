@@ -1,10 +1,11 @@
 <template>
   <v-navigation-drawer
-    absolute
-    right
     temporary
+    right
     dark
+    fixed
     class="black-bg"
+    height="320px"
     v-if="sideNav"
     v-model="sideNav"
   >
@@ -36,6 +37,31 @@
             <v-list-item-title>Speakers</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <v-divider></v-divider>
+        <v-menu dark>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              style="
+                background: none;
+                text-transform: capitalize;
+                font-size: small;
+              "
+              v-bind="attrs"
+              v-on="on"
+            >
+              Events
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item
+              v-for="(item, index) in items"
+              :key="index"
+              @click="route(index)"
+            >
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
         <v-divider></v-divider>
         <v-list-item to="/team">
           <v-list-item-content>

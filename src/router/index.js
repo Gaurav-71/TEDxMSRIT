@@ -12,6 +12,7 @@ import Events from "../views/Events.vue";
 import Register from "../views/Register.vue";
 import Login from "../views/Admin/Login.vue";
 import Home from "../views/Admin/Home.vue";
+import Success from "../views/Success.vue";
 
 Vue.use(VueRouter);
 
@@ -20,6 +21,11 @@ const routes = [
     path: "/",
     name: "Landing",
     component: Landing,
+  },
+  {
+    path: "/succesful-registration",
+    name: "Success",
+    component: Success,
   },
   {
     path: "/team",

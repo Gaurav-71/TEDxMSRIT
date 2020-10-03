@@ -165,7 +165,7 @@ export default {
             .dispatch("saveParticipantDetails", payload)
             .then(() => {
               this.isLoading = false;
-              this.$router.push("/");
+              this.$router.push("/succesful-registration");
             })
             .catch((resp) => {
               console.log(resp);

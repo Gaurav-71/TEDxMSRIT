@@ -242,7 +242,7 @@ export default {
               name: "Ms. Priyanka Diwaakar",
               description: "First Transgender Radio Jockey of the country",
               src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/Ms.PriyankaDiwaakar.jpeg?raw=true",
+                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/Ms.PriyankaDiwaakar.jpeg..jpeg?raw=true",
               loaded: false,
             },
             {
@@ -375,6 +375,9 @@ export default {
       font-family: "Anton", sans-serif !important;
       text-transform: uppercase;
       color: $theme-color !important;
+      @include responsive(phone) {
+        font-size: small !important;
+      }
     }
     .image-subtitle {
       position: absolute;
