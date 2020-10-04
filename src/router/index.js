@@ -21,46 +21,73 @@ const routes = [
     path: "/",
     name: "Landing",
     component: Landing,
+    meta: {
+      title: "TEDxMSRIT",
+    },
   },
   {
     path: "/succesful-registration",
     name: "Success",
     component: Success,
+    meta: {
+      title: "TEDxMSRIT",
+    },
   },
   {
     path: "/team",
     name: "Team",
     component: Team,
+    meta: {
+      title: "TEDxMSRIT | Team",
+    },
   },
   {
     path: "/about",
     name: "About",
     component: About,
+    meta: {
+      title: "TEDxMSRIT | About",
+    },
   },
   {
     path: "/speakers",
     name: "Speakers",
     component: Speakers,
+    meta: {
+      title: "TEDxMSRIT | Speakers",
+    },
   },
   {
     path: "/contact-us",
     name: "ContactUs",
     component: ContactUs,
+    meta: {
+      title: "TEDxMSRIT | Contact Us",
+    },
   },
   {
     path: "/events",
     name: "Events",
     component: Events,
+    meta: {
+      title: "TEDxMSRIT | Events",
+    },
   },
   {
     path: "/register",
     name: "Register",
     component: Register,
+    meta: {
+      title: "TEDxMSRIT | Register",
+    },
   },
   {
     path: "/login",
     name: "Login",
     component: Login,
+    meta: {
+      title: "TEDxMSRIT | Login",
+    },
   },
   {
     path: "/admin/home",
@@ -68,6 +95,7 @@ const routes = [
     component: Home,
     meta: {
       requiresAuth: true,
+      title: "Admin",
     },
   },
 ];
@@ -84,6 +112,7 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   const loggedIn = store.state.isLoggedIn;
   const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
+  document.title = to.meta.title;
   if (!loggedIn && requiresAuth) {
     next("/login");
   } else {
