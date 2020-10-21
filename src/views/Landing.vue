@@ -332,115 +332,72 @@
           <div class="line"></div>
         </div>
         <div class="speakers">
-          <!---  <v-card class="v-card" max-width="250">
-            <v-img
-              height="350"
-              class="black--text align-center mx-4"
-              src="../assets/Landing Page/dheeraj.jpeg"
-            >
-              <v-card-title style="background: red">Speaker 1</v-card-title>
-            </v-img>
-          </v-card> 
           <v-card class="v-card" max-width="250">
             <v-img
               height="350"
-              class="black--text align-end mx-4"
-              src="../assets/Landing Page/dheeraj.jpeg"
+              class="black--text align-end"
+              src="https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Mehul.jpeg?raw=true"
             >
-              <v-card-title>Speaker 2</v-card-title>
+              <v-card-title class="my-title">Mehul Manjeshwar</v-card-title>
             </v-img>
           </v-card>
           <v-card class="v-card" max-width="250">
             <v-img
               height="350"
-              class="black--text align-end mx-4"
-              src="../assets/Landing Page/dheeraj.jpeg"
+              class="black--text align-end"
+              src="https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Samarth.jpeg?raw=true"
             >
-              <v-card-title>Speaker 3</v-card-title>
+              <v-card-title class="my-title">Samarth Kholkar</v-card-title>
             </v-img>
           </v-card>
           <v-card class="v-card" max-width="250">
             <v-img
               height="350"
-              class="black--text align-end mx-4"
-              src="../assets/Landing Page/dheeraj.jpeg"
+              class="black--text align-end"
+              src="https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Qian.jpeg?raw=true"
             >
-              <v-card-title>Speaker 4</v-card-title>
+              <v-card-title class="my-title">Qian Wang</v-card-title>
             </v-img>
           </v-card>
           <v-card class="v-card" max-width="250">
             <v-img
               height="350"
-              class="black--text align-end mx-4"
-              src="../assets/Landing Page/dheeraj.jpeg"
+              class="black--text align-end"
+              src="https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Shailesh.jpeg?raw=true"
             >
-              <v-card-title>Speaker 5</v-card-title>
-            </v-img>
-          </v-card> --->
-          <v-card class="v-card" width="250">
-            <v-img height="350" class="black--text align-center">
-              <v-card-title class="yellow--text black-gradient"
-                >Speaker 1
-              </v-card-title>
-              <v-card-subtitle
-                class="white--text black-gradient"
-                style="font-weight: lighter !important"
-                >To be revealed soon</v-card-subtitle
-              >
+              <v-card-title class="my-title">Shailesh Awathe</v-card-title>
             </v-img>
           </v-card>
-          <v-card class="v-card" width="250">
-            <v-img height="350" class="black--text align-center">
-              <v-card-title class="yellow--text black-gradient"
-                >Speaker 2
-              </v-card-title>
-              <v-card-subtitle
-                class="white--text black-gradient"
-                style="font-weight: lighter !important"
-                >To be revealed soon</v-card-subtitle
-              >
-            </v-img>
-          </v-card>
-          <v-card class="v-card" width="250">
-            <v-img height="350" class="black--text align-center">
-              <v-card-title class="yellow--text black-gradient"
-                >Speaker 3
-              </v-card-title>
-              <v-card-subtitle
-                class="white--text black-gradient"
-                style="font-weight: lighter !important"
-                >To be revealed soon</v-card-subtitle
-              >
-            </v-img>
-          </v-card>
-          <v-card class="v-card" width="250">
-            <v-img height="350" class="black--text align-center">
-              <v-card-title class="yellow--text black-gradient"
-                >Speaker 4
-              </v-card-title>
-              <v-card-subtitle
-                class="white--text black-gradient"
-                style="font-weight: lighter !important"
-                >To be revealed soon</v-card-subtitle
-              >
-            </v-img>
-          </v-card>
-          <v-card class="v-card" width="250">
-            <v-img height="350" class="black--text align-center">
-              <v-card-title class="yellow--text black-gradient"
-                >Speaker 5
-              </v-card-title>
-              <v-card-subtitle
-                class="white--text black-gradient"
-                style="font-weight: lighter !important"
-                >To be revealed soon</v-card-subtitle
-              >
+          <v-card class="v-card elevation-19" max-width="250">
+            <v-img
+              height="350"
+              class="black--text align-end"
+              src="https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Venkat.jpeg?raw=true"
+            >
+              <v-card-title class="my-title">Venkat Charloo</v-card-title>
             </v-img>
           </v-card>
         </div>
         <div class="more-info">
           For more information about speakers,
           <span @click="route(1)">Click Here</span>
+        </div>
+      </section>
+      <section class="speakers-section">
+        <div class="heading">
+          <div class="h1 display-2">Performers</div>
+          <div class="line"></div>
+        </div>
+        <div class="speakers">
+          <v-card class="v-card" max-width="720">
+            <v-img
+              height="350"
+              class="black--text align-end"
+              src="https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Band.jpeg?raw=true"
+            >
+              <v-card-title class="my-title">Cardboard Streets</v-card-title>
+            </v-img></v-card
+          >
         </div>
       </section>
     </div>
@@ -827,6 +784,11 @@ export default {
           background-image: $yellow-gradient;
           .black-gradient {
             background-image: $black;
+          }
+          .my-title {
+            background: rgba(black, 0.5);
+            color: $theme-color;
+            text-align: center;
           }
         }
       }

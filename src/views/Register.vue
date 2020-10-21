@@ -143,7 +143,7 @@ export default {
     validate() {
       if (
         this.$store.getters.getPaticipantsCount[0].detail.ParticipantsCounter <=
-        125
+        130
       ) {
         if (this.$refs.form.validate()) {
           this.isLoading = true;
@@ -182,7 +182,7 @@ export default {
   created() {
     if (
       this.$store.getters.getPaticipantsCount[0].detail.ParticipantsCounter >
-      125
+      130
     ) {
       this.alert = true;
     }
