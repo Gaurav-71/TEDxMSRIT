@@ -53,6 +53,14 @@
           It is a movement open to everyone – and everyone has a vital role to
           play.
         </div>
+        <div class="parax px-8">
+          Part of a global initiative, we at TEDxMSRIT aim to find ways to make
+          rapid shift to a world with net zero greenhouse emissions and tackle
+          the climate crisis. With the focus being on climate change, we focus
+          on five subject areas Food Nature Transport Energy Materials We bring
+          you a live virtual event featuring thinkers and experts in each of the
+          mentioned areas on 24th of October.
+        </div>
         <div class="hashtag">
           <div class="display-3 h1">We need Your Help.</div>
           <div class="display-1">#JoinTheCountdown</div>
@@ -687,7 +695,8 @@ export default {
           padding: 0.4rem;
         }
       }
-      .para {
+      .para,
+      .parax {
         font-family: DMSans, system-ui, -apple-system, system-ui, "Segoe UI",
           Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
           "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
@@ -698,6 +707,11 @@ export default {
         letter-spacing: 2.5px;
         @include responsive($phone) {
           display: none;
+        }
+      }
+      .parax {
+        @include responsive($phone) {
+          display: block;
         }
       }
       .hashtag {
