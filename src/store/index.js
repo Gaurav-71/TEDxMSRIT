@@ -56,7 +56,7 @@ export default new Vuex.Store({
     },
     async saveParticipantDetails(context, payload) {
       try {
-        await db.collection("Participants").add(payload);
+        await db.collection("Participants2021").add(payload);
         await db
           .collection("Counter")
           .doc(this.getters.getPaticipantsCount[0].id)
@@ -85,7 +85,7 @@ export default new Vuex.Store({
     },
     async loadParticipants(context) {
       let response = db
-        .collection("Participants")
+        .collection("Participants2021")
         .orderBy("timestamp", "desc")
         .onSnapshot((snapshot) => {
           let items = [];

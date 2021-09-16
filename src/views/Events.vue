@@ -49,7 +49,7 @@
             ></v-img>
             <v-skeleton-loader
               v-show="!speaker.loaded"
-              height="370"
+              height="250"
               width="265"
               type="card"
             ></v-skeleton-loader>
@@ -82,70 +82,61 @@ export default {
             {
               name: "Natya STEM Kampni",
               description: "Professional Dancers and Choreographers",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/NatyaSTEMDanceKampni.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/NatyaSTEMDanceKampni.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Ali Khwaja",
               description:
                 "Educationalist, Life skills trainer, Motivational speaker and Writer",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/AliKhwaja.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/AliKhwaja.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Madhu Nataraj Kiran",
               description:
                 "Performer, choreographer, educator and arts entrepreneur",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/MadhuNatarajKiran.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/MadhuNatarajKiran.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Rajdeep Manwani",
               description:
                 "Academician, Trainer, Motivational Speaker and Quizmaster",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/RajdeepManwani.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/RajdeepManwani.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Ramesh Aravind",
               description: "Actor, writer, director, producer and TV host",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/RameshAravind.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/RameshAravind.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Saveen Hegde",
               description:
                 "Award Winning speaker,humorist, entrepreneur, anchor",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/SaveenHegde.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/SaveenHegde.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Varijashree Venugopal",
               description: "Carnatic vocalist, Playback singer, and flautist",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/VarijashreeVenugopal.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/VarijashreeVenugopal.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Vasanthi Hariprakash",
               description:
                 "Journalist, TV & Radio anchor, Show host and Media trainer",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/VasanthiHariprakash.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/VasanthiHariprakash.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Vikram Sridhar",
               description:
                 "Story teller, Social worker and Theatre practitioner",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/VikramSridhar.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2015/VikramSridhar.jpg?raw=true",
               loaded: false,
             },
           ],
@@ -159,44 +150,38 @@ export default {
             {
               name: "Dr.Vikram Huded",
               description: "Consultant Interventional and stroke specialist",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2016/VikramHuded1.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2016/VikramHuded1.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Harish Sivaramakrishnan",
               description: "Engineer, Designer and a rockstar",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2016/HarishSivaramakrishnan.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2016/HarishSivaramakrishnan.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Madhuvanthi Ananth",
               description: "Founder, CEO at SlamdunQ",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2016/MadhuvanthiAnanth.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2016/MadhuvanthiAnanth.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Naresh Narasimhan",
               description: "Architect, Urbanist and Activist",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2016/NareshNarasimhan.jpeg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2016/NareshNarasimhan.jpeg?raw=true",
               loaded: false,
             },
             {
               name: "Samvit Menon",
               description: "Physicist",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2016/SamvitMenon.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2016/SamvitMenon.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Sinu Joseph",
               description:
                 "Educator, counselor, writer, project coordinator and activist",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2016/SinuJoseph.jpeg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2016/SinuJoseph.jpeg?raw=true",
               loaded: false,
             },
           ],
@@ -211,61 +196,53 @@ export default {
               name: "Dr. Naveen Bagalkot",
               description:
                 "Interaction design researcher with a background in Architecture",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/naveenbagalkot.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/naveenbagalkot.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Dr.Sarthak Kamath",
               description: "Junior resident in Psychiatry at KIMS hospital",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/Dr.SarthakKamath.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/Dr.SarthakKamath.jpg?raw=true",
               loaded: false,
             },
 
             {
               name: "Mr. Sanjay Koppikar",
               description: "CEO of Quadwave, author, Evangelist and Rotarian",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/Mr.SANJAYKOPPIKAR.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/Mr.SANJAYKOPPIKAR.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Mr. Satish Perumal",
               description:
                 "Engineering to advertising and finally to stand up comedy",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/Mr.SatishPerumal.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/Mr.SatishPerumal.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Ms. Priyanka Diwaakar",
               description: "First Transgender Radio Jockey of the country",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/Ms.PriyankaDiwaakar.jpeg..jpeg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/Ms.PriyankaDiwaakar.jpeg..jpeg?raw=true",
               loaded: false,
             },
             {
               name: "Ms. Shilok Mukkati",
               description:
                 "Community Radio Journalist at Radio Active CR 90.4 MHz",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/Ms.ShilokMukkati.jpeg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/Ms.ShilokMukkati.jpeg?raw=true",
               loaded: false,
             },
             {
               name: "N Santosh Hegde",
               description:
                 "Chief Justice of India, solicitor general and a Lokayukta member",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/NSANTOSHHEGDE.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/NSANTOSHHEGDE.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Sugandha Sukrutaraj",
               description: "Founder of AMBA and author of its curriculum",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/SugandhaSukrutaraj.jpeg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2017/SugandhaSukrutaraj.jpeg?raw=true",
               loaded: false,
             },
           ],
@@ -279,64 +256,97 @@ export default {
             {
               name: "Archana Timmaraju",
               description: "Social Activist",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/ArchanaTimmaraju.png?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/ArchanaTimmaraju.png?raw=true",
               loaded: false,
             },
             {
               name: "Cohan Sujay Carlos",
               description: "CEO, ML Researcher and Consultant",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/CohanSujayCarlos.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/CohanSujayCarlos.jpg?raw=true",
               loaded: false,
             },
             {
               name: "D.B. Rai",
               description: "Indian Arm Veteran",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/DBRai.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/DBRai.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Dr. Prabha S. Chandra",
               description: "Psychiatrist, teacher",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/PrabhaSChandra.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/PrabhaSChandra.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Girish Badragond",
               description: "Innovator, partner at Santepp System",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/GirishBadragond.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/GirishBadragond.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Kimsain Jidung",
               description: "Development professional & Rehabilitator",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/KimsainJidung.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/KimsainJidung.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Ms. Anuradha Vikranth",
               description: "Professional Dancer",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/AnuradhaVikranth.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/AnuradhaVikranth.jpg?raw=true",
               loaded: false,
             },
             {
               name: "Mr. Daniel Sundaram",
               description: "A sculptor and art teacher",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/DanielSundaram.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/DanielSundaram.jpg?raw=true",
               loaded: false,
             },
             {
               name: "N.M. Prathap",
               description: "Scientist",
-              src:
-                "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/prathap.jpg?raw=true",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2019/prathap.jpg?raw=true",
+              loaded: false,
+            },
+          ],
+        },
+        {
+          theme: "Countdown",
+          date: "Oct 24th 2020",
+          description:
+            "Part of a global initiative, we at TEDxMSRIT aim to find ways to make rapid shift to a world with net zero greenhouse emissions and tackle the climate crisis. With the focus being on climate change, we focus on five subject areas Food Nature Transport Energy Materials We bring you a live virtual event featuring thinkers and experts in each of the mentioned areas",
+          speakers: [
+            {
+              name: "Mehul Manjeshwar",
+              description:
+                "Lead, marketing and sustainability at Bare Necessities",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Mehul.jpeg?raw=true",
+              loaded: false,
+            },
+            {
+              name: "Dr. Qian Wang",
+              description:
+                "Researcher, Dept of Chemistry at the University of Cambridge",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Qian.jpeg?raw=true",
+              loaded: false,
+            },
+            {
+              name: "Samarth Kholkar",
+              description:
+                "Co-Founder and CEO of B-Live, a pioneer of ‘Electric Vehicle Tourism’",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Samarth.jpeg?raw=true",
+              loaded: false,
+            },
+            {
+              name: "Shailesh Awathe",
+              description: "Farmer, Teacher and co-founder of OOO farms.",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Shailesh.jpeg?raw=true",
+              loaded: false,
+            },
+            {
+              name: "Venkat Charloo",
+              description:
+                "Founder of Coastal Impact, builds awareness on marine ecosystems ",
+              src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Venkat.jpeg?raw=true",
               loaded: false,
             },
           ],

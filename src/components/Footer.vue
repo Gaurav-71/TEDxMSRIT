@@ -92,7 +92,7 @@ footer {
     width: 100%;
     background: $theme-color;
     padding: 0.5rem;
-    color: black;
+    color: white;
     text-align: center;
   }
   ul {

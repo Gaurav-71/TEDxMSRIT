@@ -3,7 +3,7 @@
     <div class="image-header">
       <v-img
         src="../assets/Organisers/header.png"
-        class="black--text align-end header-length"
+        class="white--text align-end header-length"
         eager
       ></v-img>
       <div class="display-3 image-title white--text pl-10 pb-10">
@@ -25,7 +25,7 @@
           <a href="tel:+91 80084 45852">
             <div class="custom-flex">
               <i class="fa fa-phone size" aria-hidden="true"></i>
-              <div class="black--text ml-3">+91 80084 45852</div>
+              <div class="white--text ml-3">+91 80084 45852</div>
             </div>
           </a>
         </v-card>
@@ -44,7 +44,7 @@
           <a href="tel:+91 9739888078">
             <div class="custom-flex">
               <i class="fa fa-phone size" aria-hidden="true"></i>
-              <div class="black--text ml-3">+91 9739888078</div>
+              <div class="white--text ml-3">+91 9739888078</div>
             </div>
           </a>
         </v-card>
@@ -63,7 +63,7 @@
           <a href="tel:+91 7411452100">
             <div class="custom-flex">
               <i class="fa fa-phone size" aria-hidden="true"></i>
-              <div class="black--text ml-3">+91 7411452100</div>
+              <div class="white--text ml-3">+91 7411452100</div>
             </div>
           </a>
         </v-card>
@@ -146,7 +146,7 @@ export default {
     color: $theme-color !important;
   }
   a {
-    color: black;
+    color: white;
     margin: 0;
     padding: 0;
     text-decoration: none;

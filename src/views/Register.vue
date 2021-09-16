@@ -119,6 +119,7 @@ export default {
       isLoading: false,
       radioGroup: null,
       name: "",
+      ticketLimit: 200,
       nameRules: [
         (v) => !!v || "Name is required",
         (v) => (v && v.length <= 20) || "Name must be less than 20 characters",
@@ -143,7 +144,7 @@ export default {
     validate() {
       if (
         this.$store.getters.getPaticipantsCount[0].detail.ParticipantsCounter <=
-        150
+        this.ticketLimit
       ) {
         if (this.$refs.form.validate()) {
           this.isLoading = true;
@@ -182,7 +183,7 @@ export default {
   created() {
     if (
       this.$store.getters.getPaticipantsCount[0].detail.ParticipantsCounter >
-      150
+      this.ticketLimit
     ) {
       this.alert = true;
     }

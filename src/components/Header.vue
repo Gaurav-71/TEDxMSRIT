@@ -131,11 +131,11 @@
       class="ml-3"
       raised
     >
-      <v-icon color="yellow">mdi-open-in-new</v-icon>
+      <v-icon color="red">mdi-open-in-new</v-icon>
       <span class="ml-2">Register</span>
     </v-btn>
     <v-btn @click="logout" v-else class="ml-3" raised>
-      <v-icon color="yellow">mdi-open-in-new</v-icon>
+      <v-icon color="red">mdi-open-in-new</v-icon>
       <span class="ml-2">Sign Out</span>
     </v-btn>
     <v-icon
@@ -158,6 +158,7 @@ export default {
         { title: "2016" },
         { title: "2017" },
         { title: "2019" },
+        { title: "2020 " },
       ],
     };
   },
@@ -197,7 +198,7 @@ export default {
   transition: color 0.3s ease-in;
 }
 .hover-color:hover {
-  color: yellow !important;
+  color: red !important;
 }
 .black-bg {
   background-image: $black;

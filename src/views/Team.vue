@@ -17,8 +17,8 @@
         <v-card
           v-for="(organiser, i) in organisers"
           :key="i"
-          width="250px"
-          height="320px"
+          width="300px"
+          height="360px"
           dark
         >
           <v-list-item>
@@ -32,7 +32,7 @@
           <v-img
             v-show="organiser.loaded"
             :src="organiser.src"
-            height="250px"
+            height="290px"
             :key="i"
             eager
             @load="onImageLoad(i)"
@@ -40,7 +40,7 @@
           <v-skeleton-loader
             v-show="!organiser.loaded"
             height="250"
-            width="250"
+            width="300"
             type="card"
           ></v-skeleton-loader>
         </v-card></div
@@ -57,106 +57,49 @@ export default {
         {
           name: "Trupthi Joshi",
           desc: "Curator, Organiser and Licensee",
-          src:
-            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/trupthi.jpeg?raw=true",
+          src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/trupthi.jpeg?raw=true",
           loaded: false,
         },
         {
           name: "Kaushik Singh",
           desc: "Co-organiser",
-          src:
-            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/kaushik.jpeg?raw=true",
+          src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/kaushik.jpeg?raw=true",
           loaded: false,
         },
         {
           name: "Dheeraj Bhat",
           desc: "Coordinator",
-          src:
-            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/dheeraj.jpeg?raw=true",
+          src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/dheeraj.jpeg?raw=true",
           loaded: false,
         },
         {
           name: "Gaurav V",
           desc: "Head,  Graphic Design & Website",
-          src:
-            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/gaurav.jpg?raw=true",
-          loaded: false,
-        },
-        {
-          name: "Divya",
-          desc: "Co-Head,  Content Writing ",
-          src:
-            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/divya.jpeg?raw=true",
-          loaded: false,
-        },
-        {
-          name: "Tia",
-          desc: "Co-Head,  Content Writing",
-          src:
-            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/tia.jpeg?raw=true",
+          src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/gaurav.jpg?raw=true",
           loaded: false,
         },
         {
           name: "Aishwarya G",
-          desc: "Co-Head,  Stage Design",
-          src:
-            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/aishwarya.jpeg?raw=true",
+          desc: "Head, Design",
+          src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/aishwarya.jpeg?raw=true",
           loaded: false,
         },
         {
-          name: "Yasa Usman",
-          desc: "Co-Head,  Stage Design",
-          src:
-            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/yasa.jpeg?raw=true",
-          loaded: false,
-        },
-        {
-          name: "Nidhi Kulkarni",
-          desc: "Co-Head,  Publicity",
-          src:
-            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/nidhi.jpeg?raw=true",
-          loaded: false,
-        },
-        {
-          name: "Diya Wadhwani",
-          desc: "Co-Head,  Publicity",
-          src:
-            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/diya.jpeg?raw=true",
-          loaded: false,
-        },
-        {
-          name: "Shriya Mahan",
-          desc: "Co-Head,  Sponsorship",
-          src:
-            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/shriya.jpeg?raw=true",
-          loaded: false,
-        },
-        {
-          name: "Chandini Deb",
-          desc: "Co-Head,  Sponsorship",
-          src:
-            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/chandini.jpeg?raw=true",
+          name: "Divya",
+          desc: "Head,  Content Writing ",
+          src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/divya.jpeg?raw=true",
           loaded: false,
         },
         {
           name: "Aravind Shreyas",
-          desc: "Co-Head, Sponsorship",
-          src:
-            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/shreyas.jpeg?raw=true",
+          desc: "Head, Sponsorship",
+          src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/shreyas.jpeg?raw=true",
           loaded: false,
         },
         {
-          name: "Aditya KK",
-          desc: "Co-Head,  Logistics",
-          src:
-            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/aditya.jpeg?raw=true",
-          loaded: false,
-        },
-        {
-          name: "Aniruddh Herle",
-          desc: "Co-Head,  Logistics",
-          src:
-            "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/anirudh.jpeg?raw=true",
+          name: "Nidhi Kulkarni",
+          desc: "Head,  Publicity",
+          src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/nidhi.jpeg?raw=true",
           loaded: false,
         },
       ],
@@ -178,7 +121,6 @@ export default {
   align-items: center;
   min-height: 100vh;
   background-image: $black;
-
   .teams {
     padding-bottom: 5rem;
     width: 100%;

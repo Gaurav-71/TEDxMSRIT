@@ -17,7 +17,7 @@
         <v-card class="long-card" dark raised outlined>
           <v-card-text>
             <p class="display-1 text--primary pb-0 mb-0 card-title">TED</p>
-            <div class="mb-5 red--text">Ideas worth spreading</div>
+            <div class="mb-5">Ideas worth spreading</div>
             <div class="white--text card-body">
               Getting access to great ideas hasn’t always been easy. But good
               thing times have changed. The internet has made sharing ideas a
@@ -50,9 +50,7 @@
           <v-card dark raised outlined>
             <v-card-text>
               <p class="display-1 text--primary pb-0 mb-0 card-title">TEDx</p>
-              <div class="mb-3 red--text">
-                Independently organized TED event
-              </div>
+              <div class="mb-3">Independently organized TED event</div>
 
               <div class="white--text card-body">
                 In the spirit of ideas worth spreading, TEDx is a program of
@@ -75,7 +73,7 @@
               <p class="display-1 text--primary pb-0 mb-0 card-title">
                 TEDxMSRIT
               </p>
-              <div class="mb-3 red--text">Ramaiah Institute of Technology</div>
+              <div class="mb-3">Ramaiah Institute of Technology</div>
 
               <div class="white--text card-body">
                 TEDxMSRIT is an independently organised TEDx event organised in
@@ -155,11 +153,11 @@ export default {
       justify-content: space-around;
       font-size: 30px;
       a {
-        color: $theme-color !important;
-        transition: color 0.4s ease-in;
+        color: white !important;
+        transition: color 0.2s ease-in;
       }
       a:hover {
-        color: red !important;
+        color: $theme-color !important;
       }
     }
     .side-flex {

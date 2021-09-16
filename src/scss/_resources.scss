@@ -5,7 +5,8 @@
 
 // variables
 
-$theme-color: yellow;
+$theme-color: #ee3216;
+$accent: rgb(255, 43, 6);
 
 $yellow-gradient: radial-gradient(
     circle at 11% 62%,
@@ -221,6 +222,6 @@ $tablet-landscape: "(max-width: 1112px)";
     z-index: 3;
     font-family: "Anton", sans-serif !important;
     text-transform: uppercase;
-    color: $theme-color !important;
+    color: white !important;
   }
 }
