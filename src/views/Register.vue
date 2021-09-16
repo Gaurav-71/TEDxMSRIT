@@ -19,8 +19,8 @@
         width="100vw"
       >
         We have reached our maximum capacity for the event. If you didn’t get a
-        chance to get your ticket, please do consider joining us at one of our
-        future events!
+        chance to get your ticket, please contact us or consider joining us at
+        one of our future events!
       </v-alert>
     </div>
     <transition
@@ -143,7 +143,7 @@ export default {
     validate() {
       if (
         this.$store.getters.getPaticipantsCount[0].detail.ParticipantsCounter <=
-        130
+        150
       ) {
         if (this.$refs.form.validate()) {
           this.isLoading = true;
@@ -182,7 +182,7 @@ export default {
   created() {
     if (
       this.$store.getters.getPaticipantsCount[0].detail.ParticipantsCounter >
-      130
+      150
     ) {
       this.alert = true;
     }
