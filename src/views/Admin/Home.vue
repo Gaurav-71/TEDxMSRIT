@@ -43,8 +43,6 @@
       v-if="tableNo == 0"
       dark
       fixed-header
-      height="72vh"
-      min-width="80vw"
       class="elevation-12"
       key="0"
     >

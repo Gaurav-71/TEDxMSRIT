@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.286f4765ab673f6cb980222ce66669d9.js"
+  "/precache-manifest.09ce0d8f18f19e913d2c1f00db9a46f8.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "tedx"});
