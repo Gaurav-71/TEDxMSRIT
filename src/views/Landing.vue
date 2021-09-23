@@ -47,7 +47,7 @@
       </div>
       <section class="themes-container">
         <div class="heading">
-          <div class="h1 display-2">Theme - Mission Twenty Twenty Won</div>
+          <div class="h1 display-2">Theme - Mission Twenty Twenty Won ?</div>
           <div class="line"></div>
         </div>
         <div class="themes">
@@ -69,6 +69,15 @@
             thrived - even at our worst. Now, we have yet another mission to
             accomplish – 2021. And 2022, and 2023.
           </div>
+          <div class="videos">
+            <iframe
+              class="iframe"
+              src="https://www.youtube.com/embed/J5m6bl-5cME"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </section>
     </div>
@@ -78,77 +87,70 @@
       </div>
       <section class="speakers-section">
         <div class="heading">
-          <div class="h1 display-2">Speakers & Performers</div>
+          <div class="h1 display-2">Speakers</div>
           <div class="line"></div>
         </div>
-        <div v-if="false" class="speakers">
-          <v-card class="v-card" max-width="250">
+        <div class="speakers">
+          <v-card
+            v-for="(speaker, i) in speakers"
+            :key="i"
+            class="v-card"
+            max-width="270"
+            dark
+          >
             <v-img
+              v-show="speaker.loaded"
               height="350"
               class="black--text align-end"
-              src="https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Mehul.jpeg?raw=true"
+              :src="speaker.src"
+              eager
+              @load="onImageLoad(i)"
             >
-              <v-card-title class="my-title">Mehul Manjeshwar</v-card-title>
+              <v-card-title class="my-title">{{ speaker.name }}</v-card-title>
             </v-img>
-          </v-card>
-          <v-card class="v-card" max-width="250">
-            <v-img
+            <v-skeleton-loader
+              v-show="!speaker.loaded"
               height="350"
+              width="255"
+              type="card"
               class="black--text align-end"
-              src="https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Samarth.jpeg?raw=true"
-            >
-              <v-card-title class="my-title">Samarth Kholkar</v-card-title>
-            </v-img>
-          </v-card>
-          <v-card class="v-card" max-width="250">
-            <v-img
-              height="350"
-              class="black--text align-end"
-              src="https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Qian.jpeg?raw=true"
-            >
-              <v-card-title class="my-title">Qian Wang</v-card-title>
-            </v-img>
-          </v-card>
-          <v-card class="v-card" max-width="250">
-            <v-img
-              height="350"
-              class="black--text align-end"
-              src="https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Shailesh.jpeg?raw=true"
-            >
-              <v-card-title class="my-title">Shailesh Awathe</v-card-title>
-            </v-img>
-          </v-card>
-          <v-card class="v-card elevation-19" max-width="250">
-            <v-img
-              height="350"
-              class="black--text align-end"
-              src="https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Venkat.jpeg?raw=true"
-            >
-              <v-card-title class="my-title">Venkat Charloo</v-card-title>
-            </v-img>
+              dark
+            ></v-skeleton-loader>
           </v-card>
         </div>
-        <div class="more-info white--text">
-          <!-- For more information about speakers,
-          <span @click="route(1)">Click Here</span> -->
-          Coming Soon ...
+        <div class="more-info">
+          For more information about speakers,
+          <span @click="route(1)">Click Here</span>
         </div>
       </section>
-      <section v-if="false" class="speakers-section">
+      <section class="speakers-section mb-8">
         <div class="heading">
           <div class="h1 display-2">Performers</div>
           <div class="line"></div>
         </div>
         <div class="speakers">
-          <v-card class="v-card" max-width="720">
+          <v-card class="v-card" max-width="720" dark>
             <v-img
-              height="350"
+              v-show="performers[0].loaded"
+              height="400"
               class="black--text align-end"
-              src="https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Band.jpeg?raw=true"
+              :src="performers[0].src"
+              eager
+              @load="onPerformerLoad()"
             >
-              <v-card-title class="my-title">Cardboard Streets</v-card-title>
-            </v-img></v-card
-          >
+              <v-card-title class="my-title">{{
+                performers[0].name
+              }}</v-card-title>
+            </v-img>
+            <v-skeleton-loader
+              v-show="!performers[0].loaded"
+              height="350"
+              max-width="720"
+              type="card"
+              class="black--text align-end"
+              dark
+            ></v-skeleton-loader>
+          </v-card>
         </div>
       </section>
     </div>
@@ -236,6 +238,40 @@ export default {
           src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Carousel/8.jpg?raw=true",
         },
       ],
+      speakers: [
+        {
+          name: "Meghna Reddy Gundlapally",
+          src: "https://github.com/Gaurav-71/TEDxMSRIT/blob/master/src/assets/Speakers/2021/Meghana.jpg?raw=true",
+          loaded: false,
+        },
+        {
+          name: "Dr. Taslimarif Saiyed",
+          src: "https://github.com/Gaurav-71/TEDxMSRIT/blob/master/src/assets/Speakers/2021/Taslim.jpg?raw=true",
+          loaded: false,
+        },
+        {
+          name: "Tanvie Hans",
+          src: "https://github.com/Gaurav-71/TEDxMSRIT/blob/master/src/assets/Speakers/2021/Tanvie.jpg?raw=true",
+          loaded: false,
+        },
+        {
+          name: "Dr. Suresh Bada Math",
+          src: "https://github.com/Gaurav-71/TEDxMSRIT/blob/master/src/assets/Speakers/2021/Suresh.jpeg?raw=true",
+          loaded: false,
+        },
+        {
+          name: "Nithya Rao",
+          src: "https://github.com/Gaurav-71/TEDxMSRIT/blob/master/src/assets/Speakers/2021/Nithya.jpg?raw=true",
+          loaded: false,
+        },
+      ],
+      performers: [
+        {
+          name: "The Juke Radio",
+          src: "https://github.com/Gaurav-71/TEDxMSRIT/blob/master/src/assets/Speakers/2021/Juke.jpg?raw=true",
+          loaded: false,
+        },
+      ],
     };
   },
   methods: {
@@ -248,6 +284,12 @@ export default {
           this.$router.push("/team");
           break;
       }
+    },
+    onImageLoad(index) {
+      this.speakers[index].loaded = true;
+    },
+    onPerformerLoad() {
+      this.performers[0].loaded = true;
     },
   },
 };
@@ -411,7 +453,7 @@ export default {
         margin: 1.5rem 0;
         letter-spacing: 2.5px;
         @include responsive($phone) {
-          display: none;
+          font-size: small;
         }
       }
       .parax {
@@ -517,7 +559,7 @@ export default {
         margin: 1rem 0;
         letter-spacing: 2.5px;
         @include responsive($phone) {
-          display: none;
+          font-size: small;
         }
       }
       .parax {
@@ -548,6 +590,36 @@ export default {
           }
         }
       }
+      .videos {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem 0;
+        margin-top: 2rem;
+        @include responsive($phone) {
+          flex-wrap: wrap;
+        }
+        .iframe {
+          width: 560px;
+          height: 320px;
+          @include responsive($tablet-landscape) {
+            transform: scale(0.95);
+          }
+          @include responsive($tablet-portrait) {
+            width: 320px;
+            height: 180px;
+          }
+          @include responsive($phone) {
+            width: 320px;
+            height: 180px;
+            margin: 0.5rem;
+          }
+          @include responsive($small-phone) {
+            width: 250px;
+            height: 150px;
+          }
+        }
+      }
     }
   }
   .speakers-container {
@@ -565,7 +637,12 @@ export default {
         flex-wrap: wrap;
         .v-card {
           margin: 1rem;
-          background-image: $yellow-gradient;
+          @include responsive($phone) {
+            width: 320px;
+          }
+          @include responsive($small-phone) {
+            width: 270px;
+          }
           .black-gradient {
             background-image: $black;
           }

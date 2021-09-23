@@ -86,7 +86,7 @@ export default {
         },
         {
           name: "Divya",
-          desc: "Head,  Content Writing ",
+          desc: "Head,  Content Curation ",
           src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Organisers/divya.jpeg?raw=true",
           loaded: false,
         },

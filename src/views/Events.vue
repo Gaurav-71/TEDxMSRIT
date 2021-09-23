@@ -351,6 +351,44 @@ export default {
             },
           ],
         },
+        {
+          theme: "Mission 2020 Won ?",
+          date: "25th September",
+          description:
+            "Our theme for this year is “Mission Twenty Twenty Won”. Twenty-Twenty- A year that was envisioned as a landmark in many disciplines, a strong nation in the eyes of a then President, flying cars imagined by an artist, zero single-use plastic being the aim of an environmentalist, we surpassed our own expectations by the end of the last decade on numerous fronts but fell short of our own imagination in some, but twenty-twenty as a year was nothing like we imagined it would be. Twenty-twenty-one – Preceded by one of the most difficult years the modern world had witnessed, we stood spectators to a butterfly effect in action impacting every aspect of the living world. We didn’t just get through – we innovated, we invented, we created, we thrived - even at our worst. Now, we have yet another mission to accomplish – 2021. And 2022, and 2023.",
+          speakers: [
+            {
+              name: "Meghna Reddy G",
+              src: "https://github.com/Gaurav-71/TEDxMSRIT/blob/master/src/assets/Speakers/2021/Meghana.jpg?raw=true",
+              description: "Rhythmic Gymnast",
+              loaded: false,
+            },
+            {
+              name: "Dr. Taslimarif Saiyed",
+              src: "https://github.com/Gaurav-71/TEDxMSRIT/blob/master/src/assets/Speakers/2021/Taslim.jpg?raw=true",
+              description: "CEO & Director C-Camp",
+              loaded: false,
+            },
+            {
+              name: "Tanvie Hans",
+              src: "https://github.com/Gaurav-71/TEDxMSRIT/blob/master/src/assets/Speakers/2021/Tanvie.jpg?raw=true",
+              description: "Karnataka State Women's Football Team Captain",
+              loaded: false,
+            },
+            {
+              name: "Dr. Suresh Bada Math",
+              src: "https://github.com/Gaurav-71/TEDxMSRIT/blob/master/src/assets/Speakers/2021/Suresh.jpeg?raw=true",
+              description: "Head of Forensic Psychiatry, NIMHANS",
+              loaded: false,
+            },
+            {
+              name: "Nithya Rao",
+              src: "https://github.com/Gaurav-71/TEDxMSRIT/blob/master/src/assets/Speakers/2021/Nithya.jpg?raw=true",
+              description: "Psychologist, Entrepreneur, Actor & Artist",
+              loaded: false,
+            },
+          ],
+        },
       ],
     };
   },

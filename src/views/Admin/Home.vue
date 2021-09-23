@@ -59,8 +59,8 @@
         </thead>
         <tbody>
           <tr
-            v-for="participant in $store.getters.getParticipants"
-            :key="participant.participants.email"
+            v-for="(participant, i) in $store.getters.getParticipants"
+            :key="i"
           >
             <td>{{ participant.participants.name }}</td>
             <td>
@@ -98,8 +98,8 @@
         </thead>
         <tbody>
           <tr
-            v-for="participant in $store.getters.getParticipants"
-            :key="participant.participants.email"
+            v-for="(participant, j) in $store.getters.getParticipants"
+            :key="j"
           >
             <td>
               <a :href="'mailto:' + participant.participants.email">{{
@@ -126,8 +126,8 @@
         </thead>
         <tbody>
           <tr
-            v-for="participant in $store.getters.getParticipants"
-            :key="participant.participants.email"
+            v-for="(participant, k) in $store.getters.getParticipants"
+            :key="k"
           >
             <td>
               <a :href="'mailto:' + participant.participants.phoneNo">{{

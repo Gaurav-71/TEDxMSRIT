@@ -9,29 +9,40 @@
       <div class="display-3 image-title white--text pl-10 pb-10">speakers</div>
     </div>
     <div class="speaker-wrapper">
-      <h1 class="white--text">Coming Soon ...</h1>
-      <!-- <v-card
+      <v-card
         v-for="(speaker, i) in speakers"
         :key="i"
         dark
         style="width: 80vw"
         outlined
-        class="my-5 py-5 elevation-15"
+        class="my-5 py-2 elevation-15"
       >
         <v-list-item class="my-flex">
           <v-list-item-avatar tile size="220" color="transparent">
-            <v-img :src="speaker.src"></v-img>
+            <v-img
+              v-show="speaker.loaded"
+              :src="speaker.src"
+              eager
+              @load="onImageLoad(i)"
+            ></v-img>
+            <v-skeleton-loader
+              v-show="!speaker.loaded"
+              height="200"
+              width="220"
+              type="card"
+              class="black--text align-end"
+            ></v-skeleton-loader>
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-title class="headline yellow--text mb-3 px-5">
+            <v-list-item-title class="headline red--text mb-3 px-5">
               {{ speaker.name }}
             </v-list-item-title>
-            <div class="px-5">
+            <div class="px-5 line-height">
               {{ speaker.description }}
             </div>
           </v-list-item-content>
         </v-list-item>
-      </v-card> -->
+      </v-card>
     </div>
   </div>
 </template>
@@ -43,37 +54,47 @@ export default {
     return {
       speakers: [
         {
-          name: "Mehul Manjeshwar",
+          name: "Meghna Reddy G",
           description:
-            "Mehul Manjeshwar, born and raised in Qatar and Canada, currently leads the marketing and sustainability communications at Bare Necessities. He shares the story of the brand through meaningful partnerships, words, and actions. Being a firm believer in the impact of communication, raising awareness, and education being the foundation of change, he has always been passionate about sustainability. Mehul completed his MBA in the field to learn about the life cycle of products and how every process has an impact on the environment. He spent years studying and volunteering his time for environmental causes in Canada, Costa Rica, and Indonesia to raise awareness of the problems that our world faces today. Mehul is a Climate Reality Leader having had the opportunity to be trained during the Climate Reality Leadership Corps with former Vice President Al Gore among other knowledgeable experts in the sustainability field. He continually inspires communities to create a better lifestyle and live sustainably. With the conviction that the world is capable of finding a balance between technology and non-conformism, Mehul believes that sustainability is not about giving up either side completely but about finding the best of both worlds.",
-          src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Square/Mehul.jpeg?raw=true",
+            "A 21-year-old Rhythmic Gymnast hailing from Hyderabad, Telangana, became the first-ever Indian to qualify for the Gold Coast Commonwealth Games in 2018 in this sport of Rhythmic Gymnastics, scoring the highest for the country. Starting off at a comparatively older age of 11 in a sport which wasn’t much known in our country, Meghana had to go to the US for her training due to the lack of facilities available in our country for this sport. Since then, she learned the right techniques of the game with her international training exposure across the globe including the USA, UK, Uzbekistan, Greece, Russia, and Italy. Ranked number one rhythmic gymnast in the country, Meghna can make you see the magic of movements. Defying all odds, Meghana has bagged gold for our country in the Fifth Friendly International Tournament which concluded at Del Mare, Italy, making the Indian flag proud. She has participated in the 2018 Gold Coast Commonwealth Games, the 2018 Jakarta Palembang Asian Games, many world championships and has won numerous medals in club-level competitions across the globe. She has also achieved one of the highest scores at the Ness Ziona International Tournament. She is now focused on Commonwealth games 2022 and Paris Olympics 2024, inspiring all of us.",
+          src: "https://github.com/Gaurav-71/TEDxMSRIT/blob/master/src/assets/Speakers/2021/Meghana.jpg?raw=true",
+          loaded: false,
         },
         {
-          name: "Qian Wang",
+          name: "Dr. Taslimarif Saiyed",
           description:
-            "Dr. Qian Wang, the author of over 20 research publications, many of which are based on the study of photocatalysts and their use in solar energy conversion, has been working as a researcher at the Department of Chemistry at the University of Cambridge, UK. She is currently working on the generation of renewable energy via artificial photosynthesis as an alternative to fossil fuels. Harvesting sunlight to convert water and carbon dioxide into chemical fuels has been a promising technology but has faced challenges like the assembly of efficient, selective and scalable systems without sacrificial reagents and external bias. The technology that Dr. Wang is working on, is referred to as ‘artificial leaf’ which can convert sunlight, carbon dioxide, and water into hydrogen and other carbon-based fuels. The breakthrough has been cited by many news journals, including BBC news, The Times, News Atlas, Innovation origins and DesignNews. It is hoped that this technology will pave the way toward sustainable and practical solar fuel production. We are honored to have Dr. Qian Wang address the “Energy” problem statement and are excited to know more about her discoveries in the field.",
-          src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Square/Qian.jpeg?raw=true",
+            "CEO and director of The Centre for Cellular and Molecular Platforms, or C-CAMP an initiative supported by the Department of Biotechnology, Govt of India. Dr. Saiyed started from his training in neurosciences, receiving his Ph.D. from Max-Planck Institute for Brain research situated in Germany followed by postdoctoral training at The University of California, San Francisco. He has actively taken part in biotech management and training at UC Santa Cruz, Berkeley, and San Francisco. He is currently an adjunct faculty at the Indian Institute of Technology, Madras, and Amrita Institute-School of Biotechnology. Dr. Saiyed is a strong believer in India’s potential as an innovation powerhouse. He believes in how establishing frameworks around three vital ingredients and implementing them systematically can drive India’s growth for decades. The three ingredients are a framework that facilitates the generation and curation of ideas, deep-tech investment strategies, and a bold vision with a clear view of how to realize growth in every focus sector. He also firmly believes about how the next step to powering India’s growth is establishing a seamless value chain for idea-to-market technology development.",
+          src: "https://github.com/Gaurav-71/TEDxMSRIT/blob/master/src/assets/Speakers/2021/Taslim.jpg?raw=true",
+          loaded: false,
         },
         {
-          name: "Samarth Kholkar",
+          name: "Tanvie Hans",
           description:
-            "Samarth Kholkar, Co-Founder and CEO at B:Live is currently leading the Growth, Customer Experience and Technology functions at the company. The goal behind B:Live is to drive adoption of sustainable mobility. The team has tirelessly worked to bring together leading technology, EV infrastructure, and immersive consumers experiences. It is the pioneer of ‘Electric Vehicle Tourism’ in India and has partnered with various state tourism departments and premium hotels to build the country’s first EV Tourism ecosystem. BLive has just launched India’s first multi brand EV Store to drive adoption of EVs. Samarth's journey in the field of bringing sustainability to Tourism has been an inspiring one. We are truly honoured to have Mr. Samarth Kholkar discuss “sustainable travel”, and are really excited to learn from his ways to bring our planet to a better future.",
-          src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Square/Samarth.jpeg?raw=true",
+            "An Indian footballer. From kicking ball for some of the most coveted women’s football teams and currently playing in India as the Karnataka State Women's Football Team Captain, 'Tanvie Hans' journey has been an inspiring one. She started playing football at the age of 8 and competed under multiple age groups until 2008 when she was called up to play for the Indian Football team under-19 but was not allowed to play as she was holding a British passport. She then went on to pursue her Masters from the University of Exeter. With a taste for the English women’s League, she moved back to London and tried out with the women’s league. She is an Ex-Tottenham (2013-15) & Ex- Fulham Ladies player (2015-16). She has played for Sethu FC in 2017-18 IWL and the Bangalore United. She plays as the captain of Parikrma Girls FC and is the co-founder of Sisters in Sweat, a fitness & wellness community, exclusively for women, that is comprised of over 1500 women who are scattered all across the globe. It offers physical sessions not only in football but a variety of sports such as box cricket, basketball. It is a community wherein women not only sweat together but also support one another and fix each other's crowns. Tanvie has been leaving her mark on society through her multiple endeavors in the area of football and wellness.",
+          src: "https://github.com/Gaurav-71/TEDxMSRIT/blob/master/src/assets/Speakers/2021/Tanvie.jpg?raw=true",
+          loaded: false,
         },
         {
-          name: "Venkat Charloo",
+          name: "Dr. Suresh Bada Math",
           description:
-            "Venkat Charloo, a banker by profession, has always been passionate about marine conversation. He worked in Hong Kong for 11 years before deciding to quit the rat race and start recreational scuba diving in Goa, India, in 1995. He founded Coastal Impact with the intention of building awareness about marine ecosystems and motivating people to become divers and ‘ocean ambassadors’ , as well as join in to save Goa’s precious marine life. Besides conducting underwater surveys for Central Marine Fisheries Research Institiute, Worldwide Fund for Nature, The National Institute of Oceanography (the very first UNDP funded survey of remote submerged reefs at Angria Banks) and a number of independent marine biologists and NGOs all over the West coast of India, Venkat has also done the sole surveys India for sharks for The Paul Allen Family Foundation (Bill Gates' partner in Microsoft) owned Global Finprint,which completed a worldwide survey for sharks and rays. This year, Coastal Impact will be completeling the Microfragmentation Coral Reef Transplantation Project and is looking to start a Environmental DNA project to do a comprehensive study of underwater biodiversity all over the west coast of India next year. We are honoured to have him address 'Nature' problem statement and excited to learn from his research and practices throughout his journey.",
-          src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Square/Venkat.jpeg?raw=true",
+            "Professor of Psychiatry and Head of Forensic Psychiatry Centre and Unit V at National Institute of Mental Health and Neuro Sciences. Dr Suresh completed his MBBS and thereafter MD in Psychiatry. He earned various degrees throughout his academic career such as DNB in Psychiatry, Post-Graduate Diploma in Medical Ethics and Law, Post-Graduate Diploma in Human Rights and Law and PhD in Law. He led a landmark study as a principal investigator in 2009 titled ‘The Bangalore Prison Mental Health Study: Local Lessons for National Action’, which was funded by Karnataka State Legal Service Authority, Karnataka. He played a crucial role in starting Free Legal Aid clinic at NIMHANS institute in collaboration with Karnataka State Legal Service Authority, Karnataka in 2011. His keen interest in research has led him to be an investigator in various research projects that are depicted through the 333 publications in national and international journals including 12 books. He has been honored with ‘Prof Raghuram’s - Distinguished Young Teacher Award, in the 25th Annual Conference of Indian Psychiatric Society – Karnataka Chapter and Dr C. V. Raman Young Scientist Award in Medical Field for the year 2015-16 by Government of Karnataka.",
+          src: "https://github.com/Gaurav-71/TEDxMSRIT/blob/master/src/assets/Speakers/2021/Suresh.jpeg?raw=true",
+          loaded: false,
         },
         {
-          name: "Shailesh Awathe",
+          name: "Nithya Rao",
           description:
-            "Shailesh Awate, A Farmer & Teacher. A co-founder of OOO farms. Gave up his comfortable Business in Mumbai. Along with his friends wanting to do something about the growing deforestation taking place inside the Sahyadri hills of western India. Ever since he was a young boy, Awate trekked the hills of this biodiversity and had grown concerned about this issue after which he found out that the indigenous people who used to practice sustainable farming were now growing produce for urban markets due to the road construction which led them to cut down forests. Traditional farming methods were abandoned and Industrial Agricultural models-provided hybrid seeds, fertilizers and pesticides were used which damaged the ecosystem. Awate and his friends developed the passion to tackle this issue and encourage sustainable Agroforestry farming with environmental protection. After a long struggle and focus to save the forest, OOO farms was formed training farmers to follow sustainable Primitive methods of farming with indigenous seeds, Conserving & Propagating them through Seed Banks . He along with his Friends have designed few Successful Economical Models for Farmers He has also been instrumental in devicing and Teaching a Subject for School Students 'Graam- Village' to groom minds to move towardsTodays Village and reversing Village Drain, OOO Farm works with 800 Farmer Families in 42 Village Hamlets over a Span of 650 kms of Sahyadri Range growing 45 varieties of indigenous grains and more than 100 types of wild food. Awate believes that this endeavor will positively impact and help tribal communities realize that they are the custodians of the heritage to protect, conserve and increase forest produce.",
-          src: "https://github.com/Gaurav-71/TEDx-Countdown/blob/master/src/assets/Speakers/2020/Square/Shailesh.jpeg?raw=true",
+            "a psychologist, entrepreneur, actor and artist who specializes in the spaces of self-expression, business coaching, entrepreneurship, event management, and most of all creative innovation. Nithya completed her Bachelor's degree in Theatre, Literature & Psychology from Christ University; and a Master's degree in Psychosocial Rehabilitation and Counselling from the Richmond Fellowship society. She is recognized by India Today as one of India's top 5 entrepreneurs to look out for. She is a co-founder of Heart it Out, a mental health and well-being startup that has shaped and positively influenced over 20000 individuals. She and her team strongly believe in and are working towards de-stigmatizing mental health complications in our country. They offer mental health and therapeutic services across Urban India with the aim to make mental health care accessible to 1.5 billion people of India by 2040. She has also co-founded Name Katharsis, A theatre production house dedicated to portraying real-life stories on stage. She also works with the Global shaper’s community, a non-profit organization working to address local, regional and global challenges and other social causes.",
+          src: "https://github.com/Gaurav-71/TEDxMSRIT/blob/master/src/assets/Speakers/2021/Nithya.jpg?raw=true",
+          loaded: false,
         },
       ],
     };
+  },
+  methods: {
+    onImageLoad(index) {
+      this.speakers[index].loaded = true;
+    },
   },
 };
 </script>
@@ -109,5 +130,10 @@ export default {
       margin-right: 0px;
     }
   }
+}
+
+.line-height {
+  line-height: 1.5rem;
+  text-align: justify;
 }
 </style>
