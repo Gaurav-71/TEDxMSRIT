@@ -119,7 +119,7 @@ export default {
       isLoading: false,
       radioGroup: null,
       name: "",
-      ticketLimit: 250,
+      ticketLimit: 227,
       nameRules: [
         (v) => !!v || "Name is required",
         (v) => (v && v.length <= 20) || "Name must be less than 20 characters",
